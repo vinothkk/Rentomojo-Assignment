@@ -1,0 +1,22 @@
+<h4>{{users}}<h4>
+
+<table class="table mt-5">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Company</th>
+      <th scope="col">Blog Posts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usersArray">
+      <td>{{user.name}}</td>
+      <td>{{user.company.name}}</td>
+      <td>
+        <button class="btn btn-info" (click)="onClickUserData(user)">
+          Posts page
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
